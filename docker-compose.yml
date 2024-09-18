@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  apache:
+    image: php:7.4-apache
+    container_name: docker-lamp-apache-server
+    ports:
+      - "8181:80"
+    volumes:
+      - ./www:/var/www/html
+    networks:
+      - lamp-network
+
+  mysql:
+    # image: mysql:5.7
+    image: mariadb:latest
+    container_name: docker-lamp-mariadb-server
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: mydb
+      MYSQL_USER: user
+      MYSQL_PASSWORD: userpassword
+    ports:
+      - "3366:3306"
+    volumes:
+      - ./mysql:/var/lib/mysql
+    networks:
+      - lamp-network
+
+networks:
+  lamp-network:
+    driver: bridge
+

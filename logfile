@@ -1,0 +1,269 @@
+------------------------------------------------
+  Inspecing the MariaDB Server Docker Container 
+----------------------------------------------- 
+[
+    {
+        "Id": "740d262ab626d00c4a66a41df872e8a0ee3ca6fa04c155cc7f4a1e2fd12478f3",
+        "Created": "2024-09-18T08:06:35.928298346Z",
+        "Path": "docker-entrypoint.sh",
+        "Args": [
+            "mariadbd"
+        ],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 4925,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2024-09-18T08:06:35.996703221Z",
+            "FinishedAt": "0001-01-01T00:00:00Z"
+        },
+        "Image": "sha256:6a73600e45a7f1c28b03fe7331377899efaa6bd4c78e973c55c661d8c05dd1fd",
+        "ResolvConfPath": "/var/lib/docker/containers/740d262ab626d00c4a66a41df872e8a0ee3ca6fa04c155cc7f4a1e2fd12478f3/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/740d262ab626d00c4a66a41df872e8a0ee3ca6fa04c155cc7f4a1e2fd12478f3/hostname",
+        "HostsPath": "/var/lib/docker/containers/740d262ab626d00c4a66a41df872e8a0ee3ca6fa04c155cc7f4a1e2fd12478f3/hosts",
+        "LogPath": "/var/lib/docker/containers/740d262ab626d00c4a66a41df872e8a0ee3ca6fa04c155cc7f4a1e2fd12478f3/740d262ab626d00c4a66a41df872e8a0ee3ca6fa04c155cc7f4a1e2fd12478f3-json.log",
+        "Name": "/docker-lamp-mariadb-server",
+        "RestartCount": 0,
+        "Driver": "overlay2",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": [
+                "/Users/raghavan.muthu/raghs/prfsnl/github-repos/docker-lamp/mysql:/var/lib/mysql:rw"
+            ],
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "docker-lamp_lamp-network",
+            "PortBindings": {
+                "3306/tcp": [
+                    {
+                        "HostIp": "",
+                        "HostPort": "3366"
+                    }
+                ]
+            },
+            "RestartPolicy": {
+                "Name": "no",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "CapAdd": null,
+            "CapDrop": null,
+            "CgroupnsMode": "private",
+            "Dns": null,
+            "DnsOptions": null,
+            "DnsSearch": null,
+            "ExtraHosts": [],
+            "GroupAdd": null,
+            "IpcMode": "private",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": null,
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": null,
+            "BlkioDeviceReadBps": null,
+            "BlkioDeviceWriteBps": null,
+            "BlkioDeviceReadIOps": null,
+            "BlkioDeviceWriteIOps": null,
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": null,
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": null,
+            "OomKillDisable": null,
+            "PidsLimit": null,
+            "Ulimits": null,
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "MaskedPaths": [
+                "/proc/asound",
+                "/proc/acpi",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/sys/firmware",
+                "/sys/devices/virtual/powercap"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/var/lib/docker/overlay2/3f50f0655059f9651ec0be53170ef3340685f582a2288b4dc89e965371ea4991-init/diff:/var/lib/docker/overlay2/05fe7db3c493ebace7f76713bfbf2cef94e4221ec6cf963f4c77e0141cc78049/diff:/var/lib/docker/overlay2/9dcf0fd0e1bee32d9a7baad1d20ff6a14122e7fff4abd61ebb5cb35b0bed58b0/diff:/var/lib/docker/overlay2/b5d1baf47bee4b5192c6dbfa810474021a09720d4e677b62daa1c4790e0daffe/diff:/var/lib/docker/overlay2/adf9e41a0083ac0b27d199bf65cb4a368b184b810ee052135a2693c1d617ddd1/diff:/var/lib/docker/overlay2/c91200e84852e5fd3db6ef5f201d0f719f078a87ec84c86ea28847d80acbfa32/diff:/var/lib/docker/overlay2/abdda0cc4872705ef2840fca58d0817aff32c4507a70086b41dfb7ae25c557df/diff:/var/lib/docker/overlay2/6f297d80195802c5dfea84b5194c4a586929641d0ceac211d7e72a417ca6093a/diff:/var/lib/docker/overlay2/1a8069235cdda96dc384e6f5b631d09ecb9191be72cca6092c6573f33c663e37/diff",
+                "MergedDir": "/var/lib/docker/overlay2/3f50f0655059f9651ec0be53170ef3340685f582a2288b4dc89e965371ea4991/merged",
+                "UpperDir": "/var/lib/docker/overlay2/3f50f0655059f9651ec0be53170ef3340685f582a2288b4dc89e965371ea4991/diff",
+                "WorkDir": "/var/lib/docker/overlay2/3f50f0655059f9651ec0be53170ef3340685f582a2288b4dc89e965371ea4991/work"
+            },
+            "Name": "overlay2"
+        },
+        "Mounts": [
+            {
+                "Type": "bind",
+                "Source": "/Users/raghavan.muthu/raghs/prfsnl/github-repos/docker-lamp/mysql",
+                "Destination": "/var/lib/mysql",
+                "Mode": "rw",
+                "RW": true,
+                "Propagation": "rprivate"
+            }
+        ],
+        "Config": {
+            "Hostname": "740d262ab626",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": true,
+            "AttachStderr": true,
+            "ExposedPorts": {
+                "3306/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "MYSQL_ROOT_PASSWORD=rootpassword",
+                "MYSQL_DATABASE=mydb",
+                "MYSQL_USER=user",
+                "MYSQL_PASSWORD=userpassword",
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "GOSU_VERSION=1.14",
+                "LANG=C.UTF-8",
+                "MARIADB_VERSION=1:11.0.2+maria~ubu2204"
+            ],
+            "Cmd": [
+                "mariadbd"
+            ],
+            "Image": "mariadb:latest",
+            "Volumes": {
+                "/var/lib/mysql": {}
+            },
+            "WorkingDir": "",
+            "Entrypoint": [
+                "docker-entrypoint.sh"
+            ],
+            "OnBuild": null,
+            "Labels": {
+                "com.docker.compose.config-hash": "17fe015a195fe4149350fb24925b03b2e0728061f21e6044f704aa0c0857e91a",
+                "com.docker.compose.container-number": "1",
+                "com.docker.compose.depends_on": "",
+                "com.docker.compose.image": "sha256:6a73600e45a7f1c28b03fe7331377899efaa6bd4c78e973c55c661d8c05dd1fd",
+                "com.docker.compose.oneoff": "False",
+                "com.docker.compose.project": "docker-lamp",
+                "com.docker.compose.project.config_files": "/Users/raghavan.muthu/raghs/prfsnl/github-repos/docker-lamp/docker-compose.yml",
+                "com.docker.compose.project.working_dir": "/Users/raghavan.muthu/raghs/prfsnl/github-repos/docker-lamp",
+                "com.docker.compose.service": "mysql",
+                "com.docker.compose.version": "2.29.2",
+                "org.opencontainers.image.authors": "MariaDB Community",
+                "org.opencontainers.image.base.name": "docker.io/library/ubuntu:jammy",
+                "org.opencontainers.image.description": "MariaDB Database for relational SQL",
+                "org.opencontainers.image.documentation": "https://hub.docker.com/_/mariadb/",
+                "org.opencontainers.image.licenses": "GPL-2.0",
+                "org.opencontainers.image.ref.name": "ubuntu",
+                "org.opencontainers.image.source": "https://github.com/MariaDB/mariadb-docker",
+                "org.opencontainers.image.title": "MariaDB Database",
+                "org.opencontainers.image.url": "https://github.com/MariaDB/mariadb-docker",
+                "org.opencontainers.image.vendor": "MariaDB Community",
+                "org.opencontainers.image.version": "11.0.2"
+            }
+        },
+        "NetworkSettings": {
+            "Bridge": "",
+            "SandboxID": "9d92ee52300782770f876268f402676e836137c3144f532c05128755fa847ef4",
+            "SandboxKey": "/var/run/docker/netns/9d92ee523007",
+            "Ports": {
+                "3306/tcp": [
+                    {
+                        "HostIp": "0.0.0.0",
+                        "HostPort": "3366"
+                    }
+                ]
+            },
+            "HairpinMode": false,
+            "LinkLocalIPv6Address": "",
+            "LinkLocalIPv6PrefixLen": 0,
+            "SecondaryIPAddresses": null,
+            "SecondaryIPv6Addresses": null,
+            "EndpointID": "",
+            "Gateway": "",
+            "GlobalIPv6Address": "",
+            "GlobalIPv6PrefixLen": 0,
+            "IPAddress": "",
+            "IPPrefixLen": 0,
+            "IPv6Gateway": "",
+            "MacAddress": "",
+            "Networks": {
+                "docker-lamp_lamp-network": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": [
+                        "docker-lamp-mariadb-server",
+                        "mysql"
+                    ],
+                    "MacAddress": "02:42:ac:16:00:03",
+                    "DriverOpts": null,
+                    "NetworkID": "3b55fcebe1d95a36a5b64f590bd83812d5c564870c56b08c9b9aa6fb1c841365",
+                    "EndpointID": "33b9b21933d9f5193c1c3166ca0bb3c1eec96ddd141a91111f4efc2e5c73fa9a",
+                    "Gateway": "172.22.0.1",
+                    "IPAddress": "172.22.0.3",
+                    "IPPrefixLen": 16,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "DNSNames": [
+                        "docker-lamp-mariadb-server",
+                        "mysql",
+                        "740d262ab626"
+                    ]
+                }
+            }
+        }
+    }
+]
