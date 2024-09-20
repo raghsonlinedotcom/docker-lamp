@@ -1,4 +1,4 @@
-version: '3.8'
+#version: '3.8'
 
 services:
   apache:
@@ -17,17 +17,23 @@ services:
     container_name: docker-lamp-mariadb-server
     environment:
       MYSQL_ROOT_PASSWORD: rootpassword
-      MYSQL_DATABASE: mydb
+      MYSQL_DATABASE: DockerMySQLTest
       MYSQL_USER: user
       MYSQL_PASSWORD: userpassword
     ports:
       - "3366:3306"
     volumes:
       - ./mysql:/var/lib/mysql
+      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
+        #- ./mariadb-verify.sh:/docker-entrypoint-initdb.d/mariadb-verify.sh
+        #command: bash -c "docker-entrypoint.sh mysqld & /docker-entrypoint-initdb.d/mariadb-verify.sh"
     networks:
       - lamp-network
-
+        #entrypoint: ["sh", "entrypoint.sh"]
 networks:
   lamp-network:
     driver: bridge
 
+volumes:
+  mysql_data:
+    driver: local

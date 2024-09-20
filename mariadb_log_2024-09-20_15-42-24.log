@@ -1,0 +1,29 @@
+docker-lamp-mariadb-server  | 2024-09-20 07:42:26+00:00 [Note] [Entrypoint]: Entrypoint script for MariaDB Server 1:11.0.2+maria~ubu2204 started.
+docker-lamp-mariadb-server  | total 8.0K
+docker-lamp-mariadb-server  | -rw-r--r-- 1 root root 388 Sep 20 06:32 init.sql
+docker-lamp-mariadb-server  | -rwxr-xr-x 1 root root 786 Sep 20 07:30 mariadb-verify.sh
+docker-lamp-mariadb-server  | USE DockerMySQLTest;
+docker-lamp-mariadb-server  | --
+docker-lamp-mariadb-server  | DROP TABLE IF EXISTS Test;
+docker-lamp-mariadb-server  | --
+docker-lamp-mariadb-server  | 
+docker-lamp-mariadb-server  | -- Create Table
+docker-lamp-mariadb-server  | CREATE TABLE IF NOT EXISTS Test
+docker-lamp-mariadb-server  | (
+docker-lamp-mariadb-server  | 	Id INT PRIMARY KEY AUTO_INCREMENT,
+docker-lamp-mariadb-server  | 	Name VARCHAR(50) NOT NULL,
+docker-lamp-mariadb-server  | 	IS_ACTIVE CHAR(1) DEFAULT 'Y'
+docker-lamp-mariadb-server  | );
+docker-lamp-mariadb-server  | 
+docker-lamp-mariadb-server  | -- Sample Data 
+docker-lamp-mariadb-server  | 
+docker-lamp-mariadb-server  | INSERT INTO Test (Name, IS_ACTIVE) VALUES ('Raghavan', 'Y');
+docker-lamp-mariadb-server  | INSERT INTO Test (Name) VALUES ('Kannan');
+docker-lamp-mariadb-server  | INSERT INTO Test (Name, IS_ACTIVE) VALUES ('Meenakshi', 'N');
+docker-lamp-mariadb-server  | 
+docker-lamp-mariadb-server  | /docker-entrypoint-initdb.d/init.sql exists.
+docker-lamp-mariadb-server  | 2024-09-20 07:42:26+00:00 [ERROR] [Entrypoint]: mariadbd failed while attempting to check config
+docker-lamp-mariadb-server  | 	command was: mysqld --verbose --help
+docker-lamp-mariadb-server  | 	/usr/local/bin/docker-entrypoint.sh: line 105: mysqld: command not found
+docker-lamp-mariadb-server  | /docker-entrypoint-initdb.d/mariadb-verify.sh: 12: [: 644: unexpected operator
+docker-lamp-mariadb-server  | Permissions are incorrect: 644

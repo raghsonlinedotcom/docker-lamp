@@ -1,0 +1,104 @@
+--------------------------------------------------
+ Script Metadata 
+--------------------------------------------------
+
+Script Name: cmdToRun-docker-compose-restart.sh 
+
+Execution Time: 2024-09-20_19-28-16_HKT_Fri 
+
+--------------------------------------------------
+
+
+--------------------------------------------------
+Bringing down Docker Compose services...
+--------------------------------------------------
+ Container docker-lamp-apache-server  Stopping
+ Container docker-lamp-apache-server  Stopped
+ Container docker-lamp-apache-server  Removing
+ Container docker-lamp-apache-server  Removed
+ Network docker-lamp_lamp-network  Removing
+ Network docker-lamp_lamp-network  Removed
+
+--------------------------------------------------
+Pruning unused Docker volumes...
+--------------------------------------------------
+Total reclaimed space: 0B
+
+--------------------------------------------------
+Bringing up Docker Compose services...
+--------------------------------------------------
+ Network docker-lamp_lamp-network  Creating
+ Network docker-lamp_lamp-network  Created
+ Container docker-lamp-apache-server  Creating
+ Container docker-lamp-mariadb-server  Creating
+Error response from daemon: Conflict. The container name "/docker-lamp-mariadb-server" is already in use by container "97d0bcc9658f2962795075455932c8143464670e52c6513f824c8355de9014be". You have to remove (or rename) that container to be able to reuse that name.
+
+--------------------------------------------------
+Capturing logs for Apache service...
+--------------------------------------------------
+
+--------------------------------------------------
+Capturing logs for MariaDB service...
+--------------------------------------------------
+
+--------------------------------------------------
+Logs have been saved in logs-container/2024-09-20_19-28-16_HKT_Fri
+--------------------------------------------------
+
+--------------------------------------------------
+Container status:
+--------------------------------------------------
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+
+--------------------------------------------------
+All containers:
+--------------------------------------------------
+CONTAINER ID   IMAGE            COMMAND                  CREATED                  STATUS                   PORTS     NAMES
+68d23f72384f   php:7.4-apache   "docker-php-entrypoi…"   Less than a second ago   Created                            docker-lamp-apache-server
+97d0bcc9658f   mariadb          "docker-entrypoint.s…"   2 hours ago              Exited (0) 2 hours ago             docker-lamp-mariadb-server
+
+--------------------------------------------------
+Docker images:
+--------------------------------------------------
+REPOSITORY                         TAG                  IMAGE ID       CREATED         SIZE
+digmaai/digma-docker-extension     0.6.151              518c4a264705   2 days ago      201MB
+digmatic/digma-compound            0.3.120              0fa81b5ae16f   3 days ago      797MB
+mochoa/pgadmin4-docker-extension   8.11.0               69bcd7437d29   4 weeks ago     11.5MB
+dpage/pgadmin4                     8.11                 d8777f48621d   4 weeks ago     498MB
+digmatic/ds                        0.0.22               f3a45c2129a6   7 months ago    404MB
+digmatic/digma-persistence         1.2                  77702a9ab0ae   9 months ago    272MB
+digmaai/jaeger-ui                  1.29.1-digma.0.1.4   ebd08bb96a3e   14 months ago   149MB
+mariadb                            latest               6a73600e45a7   15 months ago   386MB
+jaegertracing/all-in-one           1.45.0               edf139edd08c   16 months ago   58MB
+php                                7.4-apache           fe6d1ba7ae23   22 months ago   422MB
+
+--------------------------------------------------
+Folder structure of logs-container:
+--------------------------------------------------
+logs-container
+├── 2024-09-20_19-28-16_HKT_Fri
+│   ├── docker-lamp-apache-server.log
+│   └── docker-lamp-mariadb-server.log
+└── docker-compose-restart-2024-09-20_19-28-16_HKT_Fri.log
+
+2 directories, 3 files
+
+--------------------------------------------------
+.......... DONE ..........
+--------------------------------------------------
+
+--------------------------------------------------
+Contents of [docker-lamp-apache-server.log]:
+--------------------------------------------------
+
+
+--------------------------------------------------
+
+
+--------------------------------------------------
+Contents of [docker-lamp-mariadb-server.log]:
+--------------------------------------------------
+
+
+--------------------------------------------------
+
