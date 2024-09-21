@@ -11,6 +11,22 @@ log() {
   echo -e "$1" | tee -a $LOG_FILE
 }
 
+# Function to print table output in a structured format
+print_table() {
+    head=$(echo "$1" | head -n1)
+    body=$(echo "$1" | tail -n +2)
+    
+    log "\n+$(echo "$head" | sed 's/[^|]/*/g')+"
+    log "| $head |"
+    log "+$(echo "$head" | sed 's/[^|]/*/g')+"
+
+    while IFS= read -r line; do
+        log "| $line |"
+    done <<< "$body"
+
+    log "+$(echo "$head" | sed 's/[^|]/*/g')+"
+}
+
 # Verify Apache Service
 log "===== Apache Service Check ====="
 APACHE_STATUS=$(curl -s -o /dev/null -w "%{http_code}" http://localhost:8181/index.php)
@@ -36,13 +52,14 @@ fi
 
 # Check data from Test table in DockerMySQLTest database, run init.sql if needed
 log "\n===== DockerMySQLTest.Test Contents Check ====="
-TEST_DATA=$(docker exec -i docker-lamp-mariadb-server mariadb -u root -prootpassword -e "USE DockerMySQLTest; SELECT * FROM Test;" --table 2>&1)
+TEST_DATA=$(docker exec -i docker-lamp-mariadb-server mariadb -u root -prootpassword -e "USE DockerMySQLTest; SELECT * FROM Test;" 2>&1)
 if echo "$TEST_DATA" | grep -q "ERROR 1146 (42S02)"; then
   log "Table \`Test\` does not exist. Running init.sql..."
   docker exec -i docker-lamp-mariadb-server mariadb -u root -prootpassword DockerMySQLTest < /docker-entrypoint-initdb.d/init.sql
-  TEST_DATA=$(docker exec -i docker-lamp-mariadb-server mariadb -u root -prootpassword -e "USE DockerMySQLTest; SELECT * FROM Test;" --table)
+  TEST_DATA=$(docker exec -i docker-lamp-mariadb-server mariadb -u root -prootpassword -e "USE DockerMySQLTest; SELECT * FROM Test;")
 fi
-log "$TEST_DATA"
+
+print_table "$TEST_DATA"
 
 log "\n===== Verification Completed ====="
 

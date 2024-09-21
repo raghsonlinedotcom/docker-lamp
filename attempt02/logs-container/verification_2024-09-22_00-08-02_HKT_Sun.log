@@ -1,0 +1,20 @@
+===== Apache Service Check =====
+Apache is running and serving HTTP requests successfully.
+
+===== index.php Output Check =====
+Apache and PHP are working!
+
+===== MariaDB Service Check =====
+MariaDB is running. Version: 11.0.2-MariaDB
+
+===== DockerMySQLTest.Test Contents Check =====
+
++*****************+
+| Id	Name	IS_ACTIVE |
++*****************+
+| 1	Raghavan	Y |
+| 2	Kannan	Y |
+| 3	Meenakshi	N |
++*****************+
+
+===== Verification Completed =====

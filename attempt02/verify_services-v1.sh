@@ -36,11 +36,11 @@ fi
 
 # Check data from Test table in DockerMySQLTest database, run init.sql if needed
 log "\n===== DockerMySQLTest.Test Contents Check ====="
-TEST_DATA=$(docker exec -i docker-lamp-mariadb-server mariadb -u root -prootpassword -e "USE DockerMySQLTest; SELECT * FROM Test;" --table 2>&1)
+TEST_DATA=$(docker exec -i docker-lamp-mariadb-server mariadb -u root -prootpassword -e "USE DockerMySQLTest; SELECT * FROM Test;" 2>&1)
 if echo "$TEST_DATA" | grep -q "ERROR 1146 (42S02)"; then
   log "Table \`Test\` does not exist. Running init.sql..."
   docker exec -i docker-lamp-mariadb-server mariadb -u root -prootpassword DockerMySQLTest < /docker-entrypoint-initdb.d/init.sql
-  TEST_DATA=$(docker exec -i docker-lamp-mariadb-server mariadb -u root -prootpassword -e "USE DockerMySQLTest; SELECT * FROM Test;" --table)
+  TEST_DATA=$(docker exec -i docker-lamp-mariadb-server mariadb -u root -prootpassword -e "USE DockerMySQLTest; SELECT * FROM Test;")
 fi
 log "$TEST_DATA"
 
