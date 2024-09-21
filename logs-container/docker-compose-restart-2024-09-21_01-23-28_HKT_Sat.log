@@ -1,0 +1,143 @@
+--------------------------------------------------
+ Script Metadata 
+--------------------------------------------------
+
+Script Name: cmdToRun-docker-compose-restart.sh 
+
+Execution Time: 2024-09-21_01-23-28_HKT_Sat 
+
+--------------------------------------------------
+
+
+--------------------------------------------------
+Bringing down Docker Compose services...
+--------------------------------------------------
+time="2024-09-21T01:23:28+08:00" level=warning msg="/Users/raghavan.muthu/raghs/prfsnl/github-repos/docker-lamp/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+ Container docker-lamp-apache-server  Stopping
+ Container docker-lamp-mariadb-server  Stopping
+ Container docker-lamp-mariadb-server  Stopped
+ Container docker-lamp-mariadb-server  Removing
+ Container docker-lamp-mariadb-server  Removed
+ Container docker-lamp-apache-server  Stopped
+ Container docker-lamp-apache-server  Removing
+ Container docker-lamp-apache-server  Removed
+ Network docker-lamp_default  Removing
+ Network docker-lamp_default  Removed
+
+--------------------------------------------------
+Pruning unused Docker volumes...
+--------------------------------------------------
+Deleted Volumes:
+babaa989680f26d5cfdc710fdf888c2902c13a139b24eda2ba8546b0aee1fe2f
+
+Total reclaimed space: 173.6MB
+
+--------------------------------------------------
+Bringing up Docker Compose services...
+--------------------------------------------------
+time="2024-09-21T01:23:29+08:00" level=warning msg="/Users/raghavan.muthu/raghs/prfsnl/github-repos/docker-lamp/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+ Network docker-lamp_default  Creating
+ Network docker-lamp_default  Created
+ Container docker-lamp-apache-server  Creating
+ Container docker-lamp-mariadb-server  Creating
+ Container docker-lamp-apache-server  Created
+ Container docker-lamp-mariadb-server  Created
+ Container docker-lamp-mariadb-server  Starting
+ Container docker-lamp-apache-server  Starting
+ Container docker-lamp-mariadb-server  Started
+ Container docker-lamp-apache-server  Started
+
+--------------------------------------------------
+Capturing logs for Apache service...
+--------------------------------------------------
+time="2024-09-21T01:23:29+08:00" level=warning msg="/Users/raghavan.muthu/raghs/prfsnl/github-repos/docker-lamp/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+
+--------------------------------------------------
+Capturing logs for MariaDB service...
+--------------------------------------------------
+time="2024-09-21T01:23:29+08:00" level=warning msg="/Users/raghavan.muthu/raghs/prfsnl/github-repos/docker-lamp/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+no such service: mysql
+
+--------------------------------------------------
+Logs have been saved in logs-container/2024-09-21_01-23-28_HKT_Sat
+--------------------------------------------------
+
+--------------------------------------------------
+Container status:
+--------------------------------------------------
+CONTAINER ID   IMAGE            COMMAND                  CREATED                  STATUS                  PORTS                    NAMES
+a6803d0d99d1   php:7.4-apache   "docker-php-entrypoi…"   Less than a second ago   Up Less than a second   0.0.0.0:8181->80/tcp     docker-lamp-apache-server
+b232aca1a2c0   mariadb:latest   "docker-entrypoint.s…"   Less than a second ago   Up Less than a second   0.0.0.0:3366->3306/tcp   docker-lamp-mariadb-server
+
+--------------------------------------------------
+All containers:
+--------------------------------------------------
+CONTAINER ID   IMAGE            COMMAND                  CREATED                  STATUS                  PORTS                    NAMES
+a6803d0d99d1   php:7.4-apache   "docker-php-entrypoi…"   Less than a second ago   Up Less than a second   0.0.0.0:8181->80/tcp     docker-lamp-apache-server
+b232aca1a2c0   mariadb:latest   "docker-entrypoint.s…"   Less than a second ago   Up Less than a second   0.0.0.0:3366->3306/tcp   docker-lamp-mariadb-server
+
+--------------------------------------------------
+Docker images:
+--------------------------------------------------
+REPOSITORY                         TAG                  IMAGE ID       CREATED         SIZE
+digmaai/digma-docker-extension     0.6.151              518c4a264705   3 days ago      201MB
+digmatic/digma-compound            0.3.120              0fa81b5ae16f   3 days ago      797MB
+mochoa/pgadmin4-docker-extension   8.11.0               69bcd7437d29   4 weeks ago     11.5MB
+dpage/pgadmin4                     8.11                 d8777f48621d   4 weeks ago     498MB
+digmatic/ds                        0.0.22               f3a45c2129a6   7 months ago    404MB
+digmatic/digma-persistence         1.2                  77702a9ab0ae   9 months ago    272MB
+digmaai/jaeger-ui                  1.29.1-digma.0.1.4   ebd08bb96a3e   14 months ago   149MB
+mariadb                            latest               6a73600e45a7   15 months ago   386MB
+jaegertracing/all-in-one           1.45.0               edf139edd08c   16 months ago   58MB
+php                                7.4-apache           fe6d1ba7ae23   22 months ago   422MB
+
+--------------------------------------------------
+Folder structure of logs-container:
+--------------------------------------------------
+logs-container
+├── 2024-09-20_19-28-16_HKT_Fri
+│   ├── docker-lamp-apache-server.log
+│   └── docker-lamp-mariadb-server.log
+├── 2024-09-20_20-17-16_HKT_Fri
+│   ├── docker-lamp-apache-server.log
+│   └── docker-lamp-mariadb-server.log
+├── 2024-09-20_22-15-21_HKT_Fri
+│   ├── docker-lamp-apache-server.log
+│   └── docker-lamp-mariadb-server.log
+├── 2024-09-21_01-19-10_HKT_Sat
+│   ├── docker-lamp-apache-server.log
+│   └── docker-lamp-mariadb-server.log
+├── 2024-09-21_01-23-28_HKT_Sat
+│   ├── docker-lamp-apache-server.log
+│   └── docker-lamp-mariadb-server.log
+├── docker-compose-restart-2024-09-20_19-28-16_HKT_Fri.log
+├── docker-compose-restart-2024-09-20_20-17-16_HKT_Fri.log
+├── docker-compose-restart-2024-09-20_22-15-21_HKT_Fri.log
+├── docker-compose-restart-2024-09-21_01-19-10_HKT_Sat.log
+└── docker-compose-restart-2024-09-21_01-23-28_HKT_Sat.log
+
+6 directories, 15 files
+
+--------------------------------------------------
+.......... DONE ..........
+--------------------------------------------------
+
+--------------------------------------------------
+Contents of [docker-lamp-apache-server.log]:
+--------------------------------------------------
+
+docker-lamp-apache-server  | AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.20.0.3. Set the 'ServerName' directive globally to suppress this message
+docker-lamp-apache-server  | AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.20.0.3. Set the 'ServerName' directive globally to suppress this message
+docker-lamp-apache-server  | [Fri Sep 20 17:23:29.736973 2024] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.54 (Debian) PHP/7.4.33 configured -- resuming normal operations
+docker-lamp-apache-server  | [Fri Sep 20 17:23:29.737001 2024] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+
+--------------------------------------------------
+
+
+--------------------------------------------------
+Contents of [docker-lamp-mariadb-server.log]:
+--------------------------------------------------
+
+
+--------------------------------------------------
+

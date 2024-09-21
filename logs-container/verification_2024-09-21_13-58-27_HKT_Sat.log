@@ -1,0 +1,13 @@
+===== Apache Service Check =====
+Apache is running and serving HTTP requests successfully.
+
+===== test.php Output Check =====
+Testing PHP from the LAMP installed via Docker<br/><b>Current Server Date an Time : </b> 2024-09-21 05:58:27 5:58 am UTC<br/><b>Formatted Date and Time : </b> Saturday, 2024-09-21 11:28:27 AM IST<br/>
+
+===== MariaDB Service Check =====
+MariaDB is running. Version: 11.0.2-MariaDB
+
+===== DockerMySQLTest.Test Contents Check =====
+
+
+===== Verification Completed =====

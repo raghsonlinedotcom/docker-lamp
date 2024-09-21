@@ -1,4 +1,4 @@
-#version: '3.8'
+version: '3.1'
 
 services:
   apache:
@@ -8,32 +8,24 @@ services:
       - "8181:80"
     volumes:
       - ./www:/var/www/html
-    networks:
-      - lamp-network
 
-  mysql:
-    # image: mysql:5.7
+  mariadb:
     image: mariadb:latest
     container_name: docker-lamp-mariadb-server
     environment:
+    # PATH: "/usr/lib/mysql:/etc/mysql:/usr/share/mysql:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+      PATH: "/usr/lib/mysql:/usr/bin/mariadb:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
       MYSQL_ROOT_PASSWORD: rootpassword
       MYSQL_DATABASE: DockerMySQLTest
       MYSQL_USER: user
       MYSQL_PASSWORD: userpassword
     ports:
       - "3366:3306"
-    volumes:
-      - ./mysql:/var/lib/mysql
-      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
-        #- ./mariadb-verify.sh:/docker-entrypoint-initdb.d/mariadb-verify.sh
-        #command: bash -c "docker-entrypoint.sh mysqld & /docker-entrypoint-initdb.d/mariadb-verify.sh"
-    networks:
-      - lamp-network
-        #entrypoint: ["sh", "entrypoint.sh"]
+    # command: bash -c "docker-entrypoint.sh mysqld & /docker-entrypoint-initdb.d/mariadb-verify.sh"
+    # entrypoint: ["sh", "entrypoint.sh"]
+   volumes:
+    - ./db:/docker-entrypoint-initdb.d
 networks:
   lamp-network:
     driver: bridge
 
-volumes:
-  mysql_data:
-    driver: local

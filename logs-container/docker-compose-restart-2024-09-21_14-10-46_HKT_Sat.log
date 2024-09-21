@@ -1,0 +1,124 @@
+--------------------------------------------------
+ Script Metadata 
+--------------------------------------------------
+
+Script Name: cmdToRun-docker-compose-restart.sh 
+
+Execution Time: 2024-09-21_14-10-46_HKT_Sat 
+
+--------------------------------------------------
+
+
+--------------------------------------------------
+Bringing down Docker Compose services...
+--------------------------------------------------
+yaml: line 3: did not find expected key
+
+--------------------------------------------------
+Pruning unused Docker volumes...
+--------------------------------------------------
+Total reclaimed space: 0B
+
+--------------------------------------------------
+Bringing up Docker Compose services...
+--------------------------------------------------
+yaml: line 3: did not find expected key
+
+--------------------------------------------------
+Capturing logs for Apache service...
+--------------------------------------------------
+yaml: line 3: did not find expected key
+
+--------------------------------------------------
+Capturing logs for MariaDB service...
+--------------------------------------------------
+yaml: line 3: did not find expected key
+
+--------------------------------------------------
+Logs have been saved in logs-container/2024-09-21_14-10-46_HKT_Sat
+--------------------------------------------------
+
+--------------------------------------------------
+Container status:
+--------------------------------------------------
+CONTAINER ID   IMAGE            COMMAND                  CREATED             STATUS             PORTS                    NAMES
+9734f17540e9   php:7.4-apache   "docker-php-entrypoi…"   About an hour ago   Up About an hour   0.0.0.0:8181->80/tcp     docker-lamp-apache-server
+fd36935591f1   mariadb:latest   "docker-entrypoint.s…"   About an hour ago   Up About an hour   0.0.0.0:3366->3306/tcp   docker-lamp-mariadb-server
+
+--------------------------------------------------
+All containers:
+--------------------------------------------------
+CONTAINER ID   IMAGE            COMMAND                  CREATED             STATUS             PORTS                    NAMES
+9734f17540e9   php:7.4-apache   "docker-php-entrypoi…"   About an hour ago   Up About an hour   0.0.0.0:8181->80/tcp     docker-lamp-apache-server
+fd36935591f1   mariadb:latest   "docker-entrypoint.s…"   About an hour ago   Up About an hour   0.0.0.0:3366->3306/tcp   docker-lamp-mariadb-server
+
+--------------------------------------------------
+Docker images:
+--------------------------------------------------
+REPOSITORY                         TAG                  IMAGE ID       CREATED         SIZE
+digmaai/digma-docker-extension     0.6.151              518c4a264705   3 days ago      201MB
+digmatic/digma-compound            0.3.120              0fa81b5ae16f   3 days ago      797MB
+mochoa/pgadmin4-docker-extension   8.11.0               69bcd7437d29   4 weeks ago     11.5MB
+dpage/pgadmin4                     8.11                 d8777f48621d   4 weeks ago     498MB
+digmatic/ds                        0.0.22               f3a45c2129a6   7 months ago    404MB
+digmatic/digma-persistence         1.2                  77702a9ab0ae   9 months ago    272MB
+digmaai/jaeger-ui                  1.29.1-digma.0.1.4   ebd08bb96a3e   14 months ago   149MB
+mariadb                            latest               6a73600e45a7   15 months ago   386MB
+jaegertracing/all-in-one           1.45.0               edf139edd08c   16 months ago   58MB
+php                                7.4-apache           fe6d1ba7ae23   22 months ago   422MB
+
+--------------------------------------------------
+Folder structure of logs-container:
+--------------------------------------------------
+logs-container
+├── 2024-09-20_19-28-16_HKT_Fri
+│   ├── docker-lamp-apache-server.log
+│   └── docker-lamp-mariadb-server.log
+├── 2024-09-20_20-17-16_HKT_Fri
+│   ├── docker-lamp-apache-server.log
+│   └── docker-lamp-mariadb-server.log
+├── 2024-09-20_22-15-21_HKT_Fri
+│   ├── docker-lamp-apache-server.log
+│   └── docker-lamp-mariadb-server.log
+├── 2024-09-21_01-19-10_HKT_Sat
+│   ├── docker-lamp-apache-server.log
+│   └── docker-lamp-mariadb-server.log
+├── 2024-09-21_01-23-28_HKT_Sat
+│   ├── docker-lamp-apache-server.log
+│   └── docker-lamp-mariadb-server.log
+├── 2024-09-21_14-10-46_HKT_Sat
+│   ├── docker-lamp-apache-server.log
+│   └── docker-lamp-mariadb-server.log
+├── docker-compose-restart-2024-09-20_19-28-16_HKT_Fri.log
+├── docker-compose-restart-2024-09-20_20-17-16_HKT_Fri.log
+├── docker-compose-restart-2024-09-20_22-15-21_HKT_Fri.log
+├── docker-compose-restart-2024-09-21_01-19-10_HKT_Sat.log
+├── docker-compose-restart-2024-09-21_01-23-28_HKT_Sat.log
+├── docker-compose-restart-2024-09-21_14-10-46_HKT_Sat.log
+├── verification_2024-09-21_13-03-53_HKT_Sat.log
+├── verification_2024-09-21_13-58-27_HKT_Sat.log
+├── verification_2024-09-21_13-59-41_HKT_Sat.log
+├── verification_2024-09-21_14-03-14_HKT_Sat.log
+└── verification_2024-09-21_14-05-13_HKT_Sat.log
+
+7 directories, 23 files
+
+--------------------------------------------------
+.......... DONE ..........
+--------------------------------------------------
+
+--------------------------------------------------
+Contents of [docker-lamp-apache-server.log]:
+--------------------------------------------------
+
+
+--------------------------------------------------
+
+
+--------------------------------------------------
+Contents of [docker-lamp-mariadb-server.log]:
+--------------------------------------------------
+
+
+--------------------------------------------------
+

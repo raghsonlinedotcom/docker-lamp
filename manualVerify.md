@@ -56,3 +56,28 @@ Here's a breakdown of the `sed` command:
 
 This ensures that the modified `docker-compose.yml` file includes the required paths in the `PATH` environment variable for the `mysql` service
 
+### Troubleshooting 
+
+Hey, I have an error while issuing the `sed` command. "sed: 1: "docker-compose.yml": extra characters at the end of d command"
+The error in the `sed` command suggests there might be a syntax issue. Let's correct the command to ensure proper syntax for appending the `PATH` variable.
+```sh
+sed -i 's/\(environment:\)/\1\n      PATH: "\/usr\/lib\/mysql:\/etc\/mysql:\/usr\/share\/mysql:\/usr\/local\/sbin:\/usr\/local\/bin:\/usr\/sbin:\/usr\/bin:\/sbin:\/bin"/' docker-compose.yml
+```
+
+# After modifying the docker-compose.yml, restart the services:
+```sh
+docker-compose down
+docker-compose up -d
+```
+
+### Troubleshooting - 2
+
+```
+ex -sc '/environment:/a|      PATH: "/usr/lib/mysql:/etc/mysql:/usr/share/mysql:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"' -cx docker-compose.yml
+```
+
+# Restart the services after modifying the docker-compose.yml:
+```
+docker-compose down
+docker-compose up -d
+```
